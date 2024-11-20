@@ -1,0 +1,202 @@
+/* Estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif; /* Fonte mais moderna e delicada */
+    line-height: 1.6;
+    color: #333;
+    background: #f8fdf8;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Fontes elegantes para títulos */
+    color: #2a5727;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 18px;
+    padding: 0 20px;
+    color: #555;
+  }
+  
+  /* Header fixo */
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to right, #b9fbc4, #5cbf63);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo img {
+    max-height: 120px;
+    max-width: 120px;
+    object-fit: contain;
+  }
+  
+  .help-logo img {
+    max-height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+  }
+  
+  .help-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre texto e imagem */
+  }
+  
+  .help-text {
+    font-size: 18px; /* Texto maior */
+    font-weight: 600;
+    color: #fff;
+    margin-right: 10px; /* Texto mais próximo do centro */
+  }
+  
+  /* Nav */
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 10px 20px;
+    transition: color 0.3s, transform 0.3s;
+    border-radius: 5px;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+  }
+  
+  /* Banner */
+  .banner {
+    position: relative;
+    width: 100%; /* Ocupa 100% da largura */
+    height: 600px; /* Altura do banner */
+    overflow: hidden;
+    margin-top: 120px; /* Empurra o banner abaixo do header */
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche o espaço do banner */
+  }
+  
+  .banner-text {
+    position: absolute; /* Coloca o texto sobre o banner */
+    top: 65%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+    text-align: center;
+    z-index: 2; /* Garante que o texto fique acima da imagem */
+  }
+  
+  .banner-title {
+    color: #ffffff; /* Branco puro */
+    font-size: 60px;
+    font-weight: 900;
+    text-shadow: 
+      0px 0px 10px rgba(0, 0, 0, 0.9),  
+      5px 5px 20px rgba(0, 0, 0, 0.7),  
+      -5px 10px 40px rgba(0, 0, 0, 0.5), 
+      0px 20px 80px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+  }
+  
+  .banner-subtext {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 
+      0px 0px 8px rgba(0, 0, 0, 0.9),   
+      5px 5px 15px rgba(0, 0, 0, 0.6),  
+      -5px 10px 30px rgba(0, 0, 0, 0.5), 
+      0px 15px 50px rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+  }
+  
+  /* Seções */
+  .section {
+    padding: 140px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .green-gradient {
+    background: linear-gradient(to right, #b9fbc4, #5cbf63);
+  }
+  
+  .green-gradient h2 {
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    color: #2a5727;
+    padding-bottom: 20px;
+    text-shadow: 0px 0px 20px rgb(134, 132, 132);
+  }
+  
+  .green-gradient p {
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-weight: 700;
+    text-shadow: 0px 0px 20px rgb(51, 50, 50);
+  }
+  
+  .white-bg {
+    background: #fff;
+  }
+  
+  .white-bg h2{
+    display: flex;
+    text-align: left;    
+  }
+
+.sectiontwo {
+text-align: left;
+
+  }
+
+.sectiontwo .healthimportance{
+    display: flex; /* Define o layout flexível */
+    margin-left: 70%;
+    max-width: 300px;
+    border-radius: 60%;
+   
+}
+
+  /* Footer */
+  .footer {
+    background: linear-gradient(to right, #b9fbc4, #5cbf63);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
