@@ -175,19 +175,111 @@
     display: flex;
     text-align: left;    
   }
-
-.sectiontwo {
-text-align: left;
-
-  }
-
-.sectiontwo .healthimportance{
-    display: flex; /* Define o layout flexível */
-    margin-left: 70%;
-    max-width: 300px;
-    border-radius: 60%;
-   
+/* -----------------------------------------------SECAO2---------- */
+/* Estilo para a seção dois */
+.section-two {
+  display: flex;
+  flex-direction: column; /* Empilha os elementos em coluna */
+  gap: 20px; /* Espaço entre os elementos */
+  align-items: flex-start; /* Alinha os elementos à esquerda */
 }
+
+.section-two h2 {
+  text-align: center; /* Centraliza o título */
+  font-size: 32px; /* Define o tamanho do título */
+  margin-bottom: 15px; /* Espaço abaixo do título */
+  margin-left: 20px;
+  width: 100%; /* Garante que o título ocupe toda a largura */
+}
+
+.section-two .content {
+  display: flex; /* Layout flexível para texto e imagem */
+  gap: 70px; /* Espaço entre o texto e a imagem */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.section-two p {
+  text-align: left; /* Texto alinhado à esquerda */
+  font-size: 18px; /* Ajusta o tamanho da fonte */
+  line-height: 1.6; /* Altura das linhas */
+  color: #000000; /* Cor do texto */
+  max-width: 600px; /* Largura máxima para o texto */
+  font-weight: 600;
+}
+
+.section-two .image-container img {
+  width: 400px; /* Define a largura da imagem */
+  height: auto; /* Ajusta a altura proporcional */
+  margin-left: 100px;
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para a imagem */
+}
+/* -------------------------------SECAO3----------- */
+/* Estilo para a Seção 3 */
+.secao3 {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #b9fbc4, #5cbf63); /* Fundo verde em gradiente */
+  text-align: center;
+}
+
+.secao3 h2 {
+  font-size: 36px;
+  color: #2a5727; /* Verde escuro para o título */
+  margin-bottom: 40px;
+  text-shadow: none; /* Sem sombra no título */
+}
+
+/* Container dos cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Adapta os cards para telas menores */
+  justify-content: center;
+  gap: 30px; /* Espaço maior entre os cards */
+}
+
+/* Estilo dos cards */
+.card {
+  align-items: center;
+  background: #ffffff; /* Fundo branco */
+  color: #000; /* Texto mais escuro */
+  padding: 30px; /* Mais espaço interno */
+  border-radius: 15px; /* Borda levemente arredondada */
+  width: 350px; /* Cards mais largos */
+  height: 350px; /* Cards mais altos */
+  border: 3px solid #5cbf63; /* Borda verde */
+  display: flex;
+  flex-direction: column; /* Empilha o título e o texto */
+/* Espaço entre título e texto */
+}
+
+/* Títulos dos cards */
+.card h3 {
+  font-size: 24px;
+  color: #2a5727; /* Verde escuro para o título do card */
+  text-shadow: none; /* Sem sombra no título */
+  margin-bottom: 20px;
+}
+
+/* Texto dos cards */
+.card p {
+  font-size: 18px; /* Texto maior */
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  margin: 0; /* Remove margens externas */
+  color: #000000; /* Texto mais escuro e legível */
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
 
   /* Footer */
   .footer {
