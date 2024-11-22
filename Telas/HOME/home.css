@@ -295,7 +295,7 @@
 
 .tips-item {
   background: #ffffff; /* Fundo branco */
-  color: #2a5727; /* Texto verde escuro */
+  color: #070707; /* Texto verde escuro */
   font-size: 20px; /* Texto maior */
   line-height: 1.8; /* Melhora o espaçamento entre linhas */
   font-weight: 600;
@@ -402,23 +402,110 @@
   height: 500px; /* Mantém a proporção da imagem */
   object-fit: cover; /* Garante que a imagem preencha o espaço de forma adequada */
 }
+/* ----------------------------------SECAO7----------------------------------- */
+.final-section {
+  background: linear-gradient(to right, #f8fdf8, #e7f8ec);
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.final-content {
+  display: flex;
+  flex-wrap: wrap; /* Ajusta para telas menores */
+  gap: 30px;
+  max-width: 1200px;
+  align-items: center;
+}
 
 
+.final-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.966);
+  margin-left: 20px;
+}
 
+.final-text {
+  flex: 1;
+  text-align: right;
+  color: #2a5727;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.8;
+}
 
+.final-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
-
-
-
+.final-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000;
+}
 
   /* Footer */
-  .footer {
-    background: linear-gradient(to right, #b9fbc4, #5cbf63);
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 20px;
-    font-size: 16px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-  }
+.footer {
+  background: linear-gradient(to right, #b9fbc4, #5cbf63);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 16px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Ajusta para telas menores */
+  gap: 20px; /* Espaçamento entre os elementos no mobile */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre os itens internos */
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.footer-email,
+.footer-phone {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-icon img {
+  margin-top: 8px;
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+  display: inline-block;
+}
+
+.footer-icon {
+  text-decoration: none;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #eee;
+}
+
   
