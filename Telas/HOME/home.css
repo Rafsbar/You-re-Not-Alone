@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: 'Quicksand', sans-serif; /* Fonte mais moderna e delicada */
+    font-family: 'Quicksand', sans-serif; 
     line-height: 1.6;
     color: #333;
     background: #f8fdf8;
@@ -14,7 +14,7 @@
   
   h1, h2 {
     text-align: center;
-    font-family: 'Playfair Display', serif; /* Fontes elegantes para títulos */
+    font-family: 'Playfair Display', serif; 
     color: #2a5727;
     margin-bottom: 20px;
   }
@@ -26,7 +26,7 @@
     color: #555;
   }
   
-  /* Header fixo */
+
   .header {
     position: fixed;
     top: 0;
@@ -47,26 +47,26 @@
     object-fit: contain;
   }
   
-  .help-logo img {
+  .logo-ajuda img {
     max-height: 50px;
     max-width: 120px;
     object-fit: contain;
   }
   
-  .help-logo {
+  .logo-ajuda {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaço entre texto e imagem */
+    gap: 10px; 
   }
   
-  .help-text {
-    font-size: 18px; /* Texto maior */
+  .texto-ajuda {
+    font-size: 18px; 
     font-weight: 600;
     color: #fff;
-    margin-right: 10px; /* Texto mais próximo do centro */
+    margin-right: 10px; 
   }
   
-  /* Nav */
+
   .nav ul {
     list-style: none;
     display: flex;
@@ -89,32 +89,32 @@
     transform: scale(1.1);
   }
   
-  /* Banner */
+ 
   .banner {
     position: relative;
-    width: 100%; /* Ocupa 100% da largura */
-    height: 600px; /* Altura do banner */
+    width: 100%; 
+    height: 600px; 
     overflow: hidden;
-    margin-top: 120px; /* Empurra o banner abaixo do header */
+    margin-top: 120px; 
   }
   
   .banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Preenche o espaço do banner */
+    object-fit: cover; 
   }
   
-  .banner-text {
-    position: absolute; /* Coloca o texto sobre o banner */
-    top: 65%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+  .texto-banner {
+    position: absolute; 
+    top: 65%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     text-align: center;
-    z-index: 2; /* Garante que o texto fique acima da imagem */
+    z-index: 2; 
   }
   
-  .banner-title {
-    color: #ffffff; /* Branco puro */
+  .titulo-banner {
+    color: #ffffff; 
     font-size: 60px;
     font-weight: 900;
     text-shadow: 
@@ -125,7 +125,7 @@
     margin-bottom: 20px;
   }
   
-  .banner-subtext {
+  .subtexto-banner {
     color: #ffffff;
     font-size: 24px;
     font-weight: 500;
@@ -137,18 +137,18 @@
     line-height: 1.4;
   }
   
-  /* Seções */
+  
   .section {
     padding: 140px 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .green-gradient {
+  .gradienteVERDE {
     background: linear-gradient(to right, #b9fbc4, #5cbf63);
   }
   
-  .green-gradient h2 {
+  .gradienteVERDE h2 {
     font-size: 48px;
     font-family: 'Playfair Display', serif;
     color: #2a5727;
@@ -156,7 +156,7 @@
     text-shadow: 0px 0px 20px rgb(134, 132, 132);
   }
   
-  .green-gradient p {
+  .gradienteVERDE p {
     color: #ffffff;
     font-size: 23px;
     line-height: 1.6;
@@ -167,118 +167,116 @@
     text-shadow: 0px 0px 20px rgb(51, 50, 50);
   }
   
-  .white-bg {
+  .fundoBRANCO {
     background: #fff;
   }
   
-  .white-bg h2{
+  .fundoBRANCO h2{
     display: flex;
     text-align: left;    
   }
-/* -----------------------------------------------SECAO2---------- */
-/* Estilo para a seção dois */
-.section-two {
+.secaoDOIS {
   display: flex;
-  flex-direction: column; /* Empilha os elementos em coluna */
-  gap: 20px; /* Espaço entre os elementos */
-  align-items: flex-start; /* Alinha os elementos à esquerda */
+  flex-direction: column; 
+  gap: 20px; 
+  align-items: flex-start; 
 }
 
-.section-two h2 {
-  text-align: center; /* Centraliza o título */
-  font-size: 32px; /* Define o tamanho do título */
-  margin-bottom: 15px; /* Espaço abaixo do título */
+.secaoDOIS h2 {
+  text-align: center; 
+  font-size: 32px; 
+  margin-bottom: 15px; 
   margin-left: 20px;
-  width: 100%; /* Garante que o título ocupe toda a largura */
+  width: 100%; 
 }
 
-.section-two .content {
-  display: flex; /* Layout flexível para texto e imagem */
-  gap: 70px; /* Espaço entre o texto e a imagem */
-  align-items: center; /* Alinha verticalmente */
+.secaoDOIS .content {
+  display: flex; 
+  gap: 70px; 
+  align-items: center; 
 }
 
-.section-two p {
-  text-align: left; /* Texto alinhado à esquerda */
-  font-size: 18px; /* Ajusta o tamanho da fonte */
-  line-height: 1.6; /* Altura das linhas */
-  color: #000000; /* Cor do texto */
-  max-width: 600px; /* Largura máxima para o texto */
+.secaoDOIS p {
+  text-align: left; 
+  font-size: 18px; 
+  line-height: 1.6; 
+  color: #000000; 
+  max-width: 600px; 
   font-weight: 600;
 }
 
-.section-two .image-container img {
-  width: 400px; /* Define a largura da imagem */
-  height: auto; /* Ajusta a altura proporcional */
+.secaoDOIS .image-container img {
+  width: 400px; 
+  height: auto;
   margin-left: 100px;
-  border-radius: 50%; /* Torna a imagem redonda */
-  object-fit: cover; /* Ajusta a imagem para preencher o espaço */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para a imagem */
+  border-radius: 50%;
+  object-fit: cover; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 /* -------------------------------SECAO3----------- */
 /* Estilo para a Seção 3 */
 .secao3 {
   padding: 80px 20px;
-  background: linear-gradient(to right, #b9fbc4, #5cbf63); /* Fundo verde em gradiente */
+  background: linear-gradient(to right, #b9fbc4, #5cbf63); 
   text-align: center;
 }
 
 .secao3 h2 {
   font-size: 36px;
-  color: #2a5727; /* Verde escuro para o título */
+  color: #2a5727; 
   margin-bottom: 40px;
-  text-shadow: none; /* Sem sombra no título */
+  text-shadow: none; 
 }
 
-/* Container dos cards */
+
 .card-container {
   display: flex;
-  flex-wrap: wrap; /* Adapta os cards para telas menores */
+  flex-wrap: wrap; 
   justify-content: center;
-  gap: 30px; /* Espaço maior entre os cards */
+  gap: 30px; 
 }
 
-/* Estilo dos cards */
+
 .card {
   align-items: center;
-  background: #ffffff; /* Fundo branco */
-  color: #000; /* Texto mais escuro */
-  padding: 30px; /* Mais espaço interno */
-  border-radius: 15px; /* Borda levemente arredondada */
-  width: 350px; /* Cards mais largos */
-  height: 350px; /* Cards mais altos */
-  border: 3px solid #5cbf63; /* Borda verde */
+  background: #ffffff; 
+  color: #000; 
+  padding: 30px; 
+  border-radius: 15px; 
+  width: 350px; 
+  height: 350px; 
+  border: 3px solid #5cbf63; 
   display: flex;
-  flex-direction: column; /* Empilha o título e o texto */
-/* Espaço entre título e texto */
+  flex-direction: column; 
+
 }
 
-/* Títulos dos cards */
+/* TITULOCARD */
 .card h3 {
   font-size: 24px;
-  color: #2a5727; /* Verde escuro para o título do card */
-  text-shadow: none; /* Sem sombra no título */
+  color: #2a5727; 
+  text-shadow: none; 
   margin-bottom: 20px;
 }
 
-/* Texto dos cards */
+/* TEXTOCARD */
 .card p {
-  font-size: 18px; /* Texto maior */
-  line-height: 1.6; /* Melhor espaçamento entre linhas */
-  margin: 0; /* Remove margens externas */
-  color: #000000; /* Texto mais escuro e legível */
+  font-size: 18px; 
+  line-height: 1.6; 
+  margin: 0;
+  color: #000000; 
   font-weight: 500;
 }
 
 /* -----------------------SECAO4------------------- */
-/* Estilo para a nova seção */
-.mental-health-tips {
+
+.saudeMENTAL {
   padding: 80px 20px;
-  background: linear-gradient(to right, #f8fdf8, #e7f8ec); /* Fundo suave */
+  background: linear-gradient(to right, #f8fdf8, #e7f8ec);
   text-align: center;
 }
 
-.tips-title {
+.dicasTITULO {
   font-size: 36px;
   color: #2a5727;
   margin-bottom: 40px;
@@ -286,57 +284,56 @@
   font-family: 'Playfair Display', serif;
 }
 
-.tips-container {
+.dicasCONTAINER {
   display: flex;
-  flex-direction: column; /* Alinha itens verticalmente */
-  gap: 20px; /* Espaçamento entre os itens */
-  align-items: center; /* Centraliza os itens */
+  flex-direction: column; 
+  gap: 20px; 
+  align-items: center; 
 }
 
-.tips-item {
-  background: #ffffff; /* Fundo branco */
-  color: #070707; /* Texto verde escuro */
-  font-size: 20px; /* Texto maior */
-  line-height: 1.8; /* Melhora o espaçamento entre linhas */
+.dicasITEM {
+  background: #ffffff; 
+  color: #070707; 
+  font-size: 20px; 
+  line-height: 1.8; 
   font-weight: 600;
-  width: 90%; /* Largura ajustada */
-  max-width: 800px; /* Limite de largura */
-  padding: 15px 25px; /* Espaço interno */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-  border: 2px solid #5cbf63; /* Borda verde */
-  text-align: left; /* Alinha o texto à esquerda */
+  width: 90%; 
+  max-width: 800px; 
+  padding: 15px 25px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  border: 2px solid #5cbf63; 
+  text-align: left; 
 }
 /* --------------------------SECA05---------------- */
-/* Seção Histórias de Superação */
-.success-stories {
+.historias {
   padding: 100px 20px;
   background: linear-gradient(to right, #e7f8ec, #d0f0e0);
   text-align: center;
 }
 
-.stories-title {
+.historiasTITULO {
   font-size: 36px;
   color: #2a5727;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
 }
 
-.stories-subtitle {
+.historiasSUBTITULO {
   font-size: 18px;
   color: #555;
   margin-bottom: 50px;
 }
 
-.stories-container {
+.historiasCONTAINER {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* Espaço entre os cards */
-  align-items: stretch; /* Cards terão a mesma altura */
+  gap: 30px; 
+  align-items: stretch; 
 }
 
-.story-card {
+.historiaCARD {
   background: #ffffff;
   border-radius: 15px;
   width: 300px;
@@ -345,35 +342,35 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Espaça os elementos para centralizar o botão */
+  justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.story-card:hover {
+.historiaCARD:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.story-image {
-  width: 50px; /* Ícone menor */
-  height: 50px; /* Ícone menor */
-  margin: 0 auto 15px; /* Centralizado e com espaçamento abaixo */
+.historiaIMG {
+  width: 50px; 
+  height: 50px; 
+  margin: 0 auto 15px; 
 }
 
-.story-name {
+.historiaNOME {
   font-size: 20px;
   color: #2a5727;
   margin-bottom: 10px;
 }
 
-.story-preview {
+.historiaPREVIEW {
   font-size: 16px;
   color: #555;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.story-btn {
+.historiaBORDA {
   background: #5cbf63;
   color: #ffffff;
   border: none;
@@ -383,72 +380,119 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  align-self: center; /* Garante que o botão fique centralizado no card */
+  align-self: center; 
 }
 
-.story-btn:hover {
+.historiaBORDA:hover {
   background: #4aa752;
 }
 /* --------------------------------SECAO6--------------------------------- */
-/* Seção de Banner de Imagem */
-.full-width-banner {
-  width: 100%; /* Ocupa toda a largura da página */
-  overflow: hidden; /* Evita elementos ultrapassarem os limites */
-  margin: 0 auto; /* Centraliza a seção */
+.banner2 {
+  width: 100%;
+  overflow: hidden; 
+  margin: 0 auto;
 }
 
-.banner-image {
-  width: 100%; /* A imagem ocupa 100% da largura da seção */
-  height: 500px; /* Mantém a proporção da imagem */
-  object-fit: cover; /* Garante que a imagem preencha o espaço de forma adequada */
+.bannerIMG {
+  width: 100%; 
+  height: 500px;
+  object-fit: cover;
 }
 /* ----------------------------------SECAO7----------------------------------- */
-.final-section {
+.secao7 {
   background: linear-gradient(to right, #f8fdf8, #e7f8ec);
   padding: 100px 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.conteudo-secao7 {
   display: flex;
+  max-width: 1200px;
+  gap: 50px; 
+  align-items: center; 
+}
+
+.imagem-secao7 img {
+  width: 350px; 
+  height: auto; 
+  border-radius: 10px; 
+  object-fit: contain; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.texto-secao7 {
+  flex: 1; 
+  text-align: left; 
+  font-family: 'Quicksand', sans-serif;
+}
+
+.texto-secao7 h2 {
+  font-size: 36px;
+  color: #2a5727; 
+  margin-bottom: 20px; 
+  font-family: 'Playfair Display', serif; 
+}
+
+.texto-secao7 p {
+  font-size: 18px; 
+  line-height: 1.8;
+  color: #080808; 
+  font-weight: 500;
+}
+
+/* Seção 8: Sobre Mim */
+.secao8 {
+  width: 100%; 
+  background: linear-gradient(to right, #f8fdf8, #e7f8ec); 
+  padding: 100px 20px; 
+  display: flex; 
   justify-content: center;
   align-items: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.final-content {
-  display: flex;
-  flex-wrap: wrap; /* Ajusta para telas menores */
-  gap: 30px;
-  max-width: 1200px;
-  align-items: center;
+.conteudo-secao8 {
+  display: flex; 
+  max-width: 1200px; 
+  gap: 50px; 
+  align-items: center; 
 }
 
-
-.final-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.966);
-  margin-left: 20px;
-}
-
-.final-text {
+.texto-secao8 {
   flex: 1;
-  text-align: right;
-  color: #2a5727;
+  text-align: left; 
   font-family: 'Quicksand', sans-serif;
+}
+
+.texto-secao8 h2 {
+  font-size: 36px; 
+  color: #2a5727; 
+  margin-bottom: 20px; 
+  font-family: 'Playfair Display', serif; 
+}
+
+.texto-secao8 p {
+  font-size: 20px; 
   line-height: 1.8;
+  color: #555; 
+  font-style: italic; 
 }
 
-.final-text h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 20px;
+.texto-secao8 b {
+  color: #2a5727; 
 }
 
-.final-text p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #000;
+.imagem-secao8 img {
+  width: 300px;
+  height: 300px; 
+  border-radius: 50%;
+  object-fit: cover; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
+
+
 
   /* Footer */
 .footer {
@@ -460,45 +504,45 @@
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer-content {
+.footerCONTEUDO {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Ajusta para telas menores */
-  gap: 20px; /* Espaçamento entre os elementos no mobile */
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
+.footerESQ,
+.footer-CENTRO,
+.footer-DIREITA {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espaço entre os itens internos */
+  gap: 10px; 
 }
 
-.footer-title {
+.footerTITULO {
   font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.footer-email,
-.footer-phone {
+.footerEMAIL,
+.footer-CEL {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
 }
 
-.footer-icon img {
+.footerICON img {
   margin-top: 8px;
-  width: 24px; /* Tamanho do ícone */
+  width: 24px; 
   height: 24px;
   display: inline-block;
 }
 
-.footer-icon {
+.footerICON {
   text-decoration: none;
 }
 
