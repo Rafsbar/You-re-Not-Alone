@@ -1,0 +1,225 @@
+/* Estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8fdf8;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #2a5727;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    padding: 0 20px;
+    color: #555;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to right, #b9fbc4, #5cbf63);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo img {
+    max-height: 120px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.logo-ajuda img {
+    max-height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.logo-ajuda {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.texto-ajuda {
+    font-size: 18px; 
+    font-weight: 600;
+    color: #fff;
+    margin-right: 10px; 
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 10px 20px;
+    transition: color 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Área de Login */
+.container-login {
+    max-width: 500px;
+    margin: 160px auto 50px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container-login h1 {
+    font-size: 28px;
+    color: #2a5727;
+    margin-bottom: 20px;
+}
+
+.form-group-login {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #5cbf63;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    background: linear-gradient(to right, #5cbf63, #b9fbc4);
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4aa752;
+}
+
+/* Link "Não tem login? Cadastre-se!" */
+.cadastre-se {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cadastre-se a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #5cbf63;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cadastre-se a:hover {
+    color: #4aa752;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(to right, #b9fbc4, #5cbf63)!important;
+    color: #fff!important;
+    text-align: center!important;
+    padding: 30px 20px!important;
+    font-size: 16px!important;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1)!important;
+}
+
+.footerCONTEUDO {
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    max-width: 1200px!important;
+    margin: 0 auto!important;
+    flex-wrap: wrap!important; 
+    gap: 20px!important; 
+}
+
+.footerESQ,
+.footer-CENTRO,
+.footer-DIREITA {
+    display: flex!important;
+    align-items: center!important;
+    gap: 10px!important; 
+}
+
+.footerTITULO {
+    font-size: 18px!important;
+    font-weight: 800!important;
+    text-transform: uppercase!important;
+}
+
+.footerEMAIL,
+.footer-CEL {
+    font-size: 16px!important;
+    font-weight: 700!important;
+    color: #fff!important;
+}
+
+.footerICON img {
+    margin-top: 8px!important;
+    width: 24px!important; 
+    height: 24px!important;
+    display: inline-block!important;
+}
+
+.footerICON {
+    text-decoration: none!important;
+}
+
+.footer p {
+    margin-top: 20px!important;
+    font-size: 14px!important;
+    color: #eee!important;
+}
