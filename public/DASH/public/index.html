@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Basquete na vida</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <div id="dash_cozinhas" class="container_cozinhas">
+
+    <div class="box_cozinhas">
+        <div class="cozinhas" onclick="cozinhaA()"><div class="imagem_cozinha_safe"></div><p>Talhão 1</p></div>
+        <div class="cozinhas" onclick="cozinhaB()"><div class="imagem_cozinha_danger"></div><p>Talhão 2</p></div>
+        <div class="cozinhas" onclick="cozinhaC()"><div class="imagem_cozinha_safe "></div><p>Talhão 3</p></div>
+        <div class="cozinhas" onclick="cozinhaD()"><div class="imagem_cozinha_warning"></div><p>Talhão 4</p></div>
+        <div class="cozinhas" onclick="cozinhaE()"><div class="imagem_cozinha_safe"></div><p>Talhão 5</p></div>
+    </div> 
+    <div class="box_dashboards">
+        <div class="box_kpi_dash">
+    <div class="kpi_dash"><h4>Talhão Selelecionada:</h4> <div style="display: flex;"><p style="margin-right: 1vw;">Talhão <b id="cozinha_selecionada"> </b></p></div></div> 
+    <div class="kpi_dash"><h4>Tempo em Alerta:</h4> <p id="inicio_vazamento"></p></div> 
+    <div class="kpi_dash"><h4>Status:</h4> <p id="termino_vazamento"></p> <span id="status_mensagem" class="status_mensagem"></span></div>
+
+</div>
+  <body onload="obterDadosGrafico()">
+    <div class="painel">
+      <header>
+        <img src="assets/logo.png" alt="logo_game_awards" width="200px" />
+        <div>
+          <h1 class="titulos-italicos"></h1>
+          <h1></h1>
+        </div>
+      </header>
+      <div class="titulos">
+        <p class="titulos-italicos"></p>
+        <h1>Promessas</h1>
+        <h3>Vote na sua promessa favorita!</h3>
+      </div>
+      <div class="jogos-concorrentes">
+        <div class="jogo" onclick="votar('Luigi Borio')">
+          <img
+            src="assets/Luigi.png"
+            alt=""
+            width="200px"
+            height="300px"
+          />
+          <p>Luigi Borio</p>
+        </div>
+        <div class="jogo" onclick="votar('Kauan Raymundo')">
+          <img src="assets/kuan.png" alt="" width="200px" height="300px" />
+          <p>Kauan Raymundo</p>
+        </div>
+        <div class="jogo" onclick="votar('Eduardo Klafke')">
+          <img
+            src="assets/klafke.png"
+            alt=""
+            width="200px"
+            height="300px"
+          />
+          <p>Eduardo Klafke</p>
+        </div>
+        <div class="jogo" onclick="votar('Joao Aragao')">
+          <img
+            src="assets/joao.png"
+            alt=""
+            width="200px"
+            height="300px"
+          />
+          <p>João Aragão</p>
+        </div>
+        <div class="jogo" onclick="votar('Henrique Lucio')">
+          <img src="assets/henrique.png" width="200px" height="300px" />
+          <p>Henrique Lucio</p>
+        </div>
+        <div class="jogo" onclick="votar('Samis Calderon')">
+          <img
+            src="assets/samis.png"
+            alt=""
+            width="200px"
+            height="300px"
+          />
+          <p>Samis Calderon</p>
+        </div>
+      </div>
+      <div class="grafico">
+        <canvas id="myCanvas"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let myChart;
+
+  function votar(nomeJogo) {
+    fetch(`/votos/votar/${nomeJogo}`, {
+      method: "POST",
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log(`Voto contabilizado`);
+          atualizarGrafico();
+        } else {
+          console.error("Erro na votação ou jogo não encontrado");
+        }
+      })
+      .catch(function (error) {
+        console.error(`Erro ao realizar o voto: ${error.message}`);
+      });
+  }
+
+  function obterDadosGrafico() {
+    fetch(`/votos/ultimos`, { cache: "no-store" })
+      .then(function (response) {
+        if (response.ok) {
+          response.json().then(function (resposta) {
+            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+            plotarGrafico(resposta);
+          });
+        } else {
+          console.error("Nenhum dado encontrado ou erro na API");
+        }
+      })
+      .catch(function (error) {
+        console.error(
+          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+        );
+      });
+  }
+
+  function plotarGrafico(resposta) {
+    console.log("iniciando plotagem do gráfico...");
+
+    // Criando estrutura para plotar gráfico - labels
+    let labels = [
+      "Luigi Borio",
+      "Kauan Raymundo",
+      "Eduardo Klafkes",
+      "João Aragão",
+      "Henrique Lucio",
+      "Samis Calderon",
+    ];
+
+    // Criando estrutura para plotar gráfico - dados
+    let dados = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Votos",
+          data: [],
+          fill: false,
+          backgroundColor: [
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+          ],
+          borderColor: [
+            "rgba(75, 192, 192, 1)",
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+          ],
+          borderWidth: 1,
+          tension: 0.1,
+        },
+      ],
+    };
+
+    console.log("----------------------------------------------");
+    console.log(
+      'Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":'
+    );
+    console.log(resposta);
+
+    // Inserindo valores recebidos em estrutura para plotar o gráfico
+
+    for (i = 0; i < resposta.length; i++) {
+      var registro = resposta[i];
+      dados.datasets[0].data.push(registro.quantidade);
+    }
+
+    console.log("----------------------------------------------");
+    console.log("O gráfico será plotado com os respectivos valores:");
+    console.log("Labels:");
+    console.log(labels);
+    console.log("Dados:");
+    console.log(dados.datasets);
+    console.log("----------------------------------------------");
+
+    // Criando estrutura para plotar gráfico - config
+    const config = {
+      type: "bar",
+      data: dados,
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: "VOTAÇÃO",
+            color: "#FFFFFF",
+            font: {
+              size: 20,
+            },
+          },
+          legend: {
+            display: true,
+            labels: {
+              color: "white",
+            },
+          },
+        },
+      },
+    };
+
+    // Adicionando gráfico criado em div na tela
+    myChart = new Chart(document.getElementById("myCanvas"), config);
+  }
+
+  function atualizarGrafico() {
+    fetch(`/votos/ultimos`, { cache: "no-store" })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          resposta.json().then(function (respostaJSON) {
+            console.log(`Dados recebidos: ${JSON.stringify(respostaJSON)}`);
+            console.log(`Dados atuais do gráfico:`);
+            console.log(myChart.data);
+
+            myChart.data.datasets[0].data = [];
+
+            for (let i = 0; i < respostaJSON.length; i++) {
+              myChart.data.datasets[0].data.push(respostaJSON[i].quantidade);
+            }
+          
+            myChart.update();
+          });
+        } else {
+          console.error("Nenhum dado encontrado ou erro na API");
+        }
+      })
+      .catch(function (error) {
+        console.error(
+          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+        );
+      });
+  }
+</script>

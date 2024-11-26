@@ -1,12 +1,12 @@
 var mysql = require("mysql2");
-var ambiente_processo = 'desenvolvimento';
+
 // CONEXÃO DO BANCO MYSQL SERVER
 var mySqlConfig = {
-    host: 'localhost',
-    database: 'NotAlone',
-    user: 'root',
-    password: 'barbosafernandes123',
-    port: 3306
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT
 };
 
 function executar(instrucao) {
